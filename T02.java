@@ -4,7 +4,7 @@
 import java.util.*;
 import java.lang.Math;
 
-public class  T02{
+public class T02 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -24,6 +24,7 @@ public class  T02{
         harga = Double.parseDouble(input.nextLine());
         margin = Double.parseDouble(input.nextLine());
         rating = Double.parseDouble(input.nextLine());
+        kategori = "";
         if (rating >= 4.7) {
             kategori = "Best Pick";
         } else {
