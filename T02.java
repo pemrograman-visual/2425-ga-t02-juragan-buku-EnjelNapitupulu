@@ -8,43 +8,38 @@ public class T02 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String iSBN, judul, penulis, penerbit, formatBuku, kategori;
+        String iSBN, judul, penulis, penerbit, formatbuku, ket;
+        int stok, tahunterbit;
+        double minimummargin, rating, hargabeli;
 
         iSBN = input.nextLine();
         judul = input.nextLine();
         penulis = input.nextLine();
+        tahunterbit = Integer.parseInt(input.nextLine());
         penerbit = input.nextLine();
-        formatBuku = input.nextLine();
-        int tahunTerbit, stok;
-
-        tahunTerbit = Integer.parseInt(input.nextLine());
+        formatbuku = input.nextLine();
+        hargabeli = Double.parseDouble(input.nextLine());
+        minimummargin = Double.parseDouble(input.nextLine());
         stok = Integer.parseInt(input.nextLine());
-        double harga, margin, rating;
-
-        harga = Double.parseDouble(input.nextLine());
-        margin = Double.parseDouble(input.nextLine());
         rating = Double.parseDouble(input.nextLine());
-        kategori = "";
         if (rating >= 4.7) {
-            kategori = "Best Pick";
+            ket = "Best Pick";
         } else {
             if (rating >= 4.5) {
-                kategori = "MustRead";
+                ket = "Must Read";
             } else {
                 if (rating >= 4.0) {
-                    kategori = "Recommended";
+                    ket = "Recommended";
                 } else {
                     if (rating >= 3.0) {
-                        kategori = "Average";
+                        ket = "Average";
                     } else {
-                        if (rating <= 3.0) {
-                            kategori = "Low";
-                        }
+                        ket = "Low";
                     }
                 }
             }
         }
-        System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunTerbit + "|" + penerbit + "|" + formatBuku + "|" + toFixed(harga,2) + "|" + toFixed(margin,2) + "|" + stok + "|" + toFixed(rating,1) + "|" + kategori);
+        System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunterbit + "|" + penerbit + "|" + formatbuku + "|" + hargabeli + "|" + minimummargin + "|" + stok + "|" + toFixed(rating,1) + "|" + ket);
     }
     
     private static String toFixed(double value, int digits) {
