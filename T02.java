@@ -50,4 +50,3 @@ public class T02 {
         return String.format("%." + digits + "f", value);
     }
 }
-
