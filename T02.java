@@ -17,15 +17,15 @@ public class T02 {
         formatBuku = input.nextLine();
         int tahunTerbit, stok;
 
-        tahunTerbit = Integer.parseInt(input.nextLine());
-        stok = Integer.parseInt(input.nextLine());
+        tahunTerbit = input.nextInt();
+        stok = input.nextInt();
         double harga, margin, rating;
 
-        harga = Double.parseDouble(input.nextLine());
-        margin = Double.parseDouble(input.nextLine());
-        rating = Double.parseDouble(input.nextLine());
+        harga = input.nextDouble();
+        margin = input.nextDouble();
+        rating = input.nextDouble();
         if (rating >= 4.7) {
-            kategori = "BestPick";
+            kategori = "Best Pick";
         } else {
             if (rating >= 4.5) {
                 kategori = "MustRead";
