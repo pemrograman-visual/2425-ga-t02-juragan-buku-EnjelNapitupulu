@@ -44,7 +44,7 @@ public class T02 {
                 }
             }
         }
-        System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunTerbit + "|" + penerbit + "|" + formatBuku + "|" + toFixed(harga,2) + "|" + toFixed(margin,2) + "|" + stok + "|" + rating + "|" + kategori);
+        System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunTerbit + "|" + penerbit + "|" + formatBuku + "|" + toFixed(harga,2) + "|" + toFixed(margin,2) + "|" + stok + "|" + toFixed(rating,1) + "|" + kategori);
     }
     
     private static String toFixed(double value, int digits) {
